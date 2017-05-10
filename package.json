@@ -1,6 +1,6 @@
 {
   "name": "pbts-react-native",
-  "version": "6.8.1",
+  "version": "6.8.2",
   "versionScheme": "~",
   "description": "Protocol Buffers for JavaScript (& TypeScript).",
   "author": "Daniel Wirtz <dcode+protobufjs@dcode.io>",
