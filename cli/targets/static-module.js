@@ -19,7 +19,7 @@ function static_module_target(root, options, callback) {
             return;
         }
         try {
-            output = util.wrap(output, protobuf.util.merge({ dependency: "protobufjs/minimal" }, options));
+            output = util.wrap(output, protobuf.util.merge({ dependency: "pbts-react-native/minimal" }, options));
         } catch (e) {
             callback(e);
             return;
