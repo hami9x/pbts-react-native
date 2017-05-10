@@ -110,16 +110,7 @@ util.isSet = function isSet(obj, prop) {
  * Node's Buffer class if available.
  * @type {Constructor<Buffer>}
  */
-util.Buffer = (function() {
-    try {
-        var Buffer = util.inquire("buffer").Buffer;
-        // refuse to use non-node buffers if not explicitly assigned (perf reasons):
-        return Buffer.prototype.utf8Write ? Buffer : /* istanbul ignore next */ null;
-    } catch (e) {
-        /* istanbul ignore next */
-        return null;
-    }
-})();
+util.Buffer = null
 
 // Internal alias of or polyfull for Buffer.from.
 util._Buffer_from = null;
@@ -164,7 +155,7 @@ util.Array = typeof Uint8Array !== "undefined" ? Uint8Array /* istanbul ignore n
  * Long.js's Long class if available.
  * @type {Constructor<Long>}
  */
-util.Long = /* istanbul ignore next */ global.dcodeIO && /* istanbul ignore next */ global.dcodeIO.Long || util.inquire("long");
+util.Long = /* istanbul ignore next */ global.dcodeIO && /* istanbul ignore next */ global.dcodeIO.Long || require('long')
 
 /**
  * Regular expression used to verify 2 bit (`bool`) map keys.
