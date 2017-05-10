@@ -131,7 +131,7 @@ exports.main = function(args, callback) {
                 );
             if (!argv.main)
                 output.push(
-                    "import * as $protobuf from \"protobufjs\";",
+                    "import * as $protobuf from \"pbts-react-native\";",
                     ""
                 );
             output = output.join("\n") + "\n" + out.join("");
